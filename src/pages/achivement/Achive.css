@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Ubuntu', sans-serif;  */
+}
+.fullPgAchivement{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.Achivements{
+    width: 100vw;
+    height: 100vh;
+    /* background-position: left; */
+    
+    /* background-size: cover; */
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+.achHead{
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 60px;
+}
+.achHead h1{
+    font-family: "Teko", sans-serif;
+    color: #fccf31;
+    font-size: 5rem;
+}
+.achHead h2{
+    /* text-align: center; */
+    color: #c7c7c7;
+    font-size: 1.5rem;
+    padding: 20px 0;
+}
+.aboutAchive{
+    width: 50vw;
+    height: 80vh;
+    color: rgb(226, 226, 226);
+    padding: 10vh 40px;
+    font-size: 1.1rem;
+    line-height: 170%;
+}
+.aboutAchive li{
+    padding: 3vh 0 0 0;
+}
+.aboutAchive p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.aboutAchive li::marker{
+    font-size: 2em;
+    color: #fbbb26;
+    padding: 4vh 0;
+}
+.bgImg{
+    position: absolute;
+    width: auto;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0.8;
+}
+.bgGrad{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(270.5deg, #171717 40.1%, rgba(23, 23, 23, 0.22) 75.9%, #000000 99.58%);
+    /* background: linear-gradient(270.5deg, #e1e1e1 40.1%, rgba(238, 238, 238, 0.22) 75.9%, #ffffff 99.58%); */
+    z-index: -1;
+}
+.moreLinks{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 10vw;
+    display: flex;
+    justify-content: space-around;
+}

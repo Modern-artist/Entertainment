@@ -1,19 +1,26 @@
-import React from 'react';
-import Home from './pages/Home';
-import AllAchivements from "./pages/AllAchivements/AllAchivements";
-import Achive from "./pages/achivement/Achive";
-import Skills from './pages/skills/Skills';
-import { Routes, Route} from 'react-router-dom';
-// import NavBar from './components/NavBar';
+import "./App.scss";
+
+import Home from "./pages/home/Home";
+import FullpgMovie from "./pages/fullpgMovie/FullpgMovie";
+import UnderDevelopment from "./pages/underDevelopment/UnderDevelopment";
+import {BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import backGrounds from "../src/assets/gokuBg.jpeg";
+
+
+
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/AllAchivements" element={<AllAchivements />} />
-        <Route path="/Skills" element={<Skills />} />
-        <Route path="/Achivement" element={<Achive />} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/underDevelopment" element={<UnderDevelopment />} />
+          <Route path="/underDevelopment" element={<UnderDevelopment />} />
+          <Route path="/underDevelopment" element={<UnderDevelopment />} />
+          <Route path="movie/:id" element={<FullpgMovie />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

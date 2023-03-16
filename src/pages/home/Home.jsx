@@ -10,6 +10,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import NavDown from "../../components/NavDown/NavDown";
 import Banner from "../../components/banner/Banner";
 import MoviesSec from "../../components/moviesSec/MoviesSec";
+import MobNav from "../../components/mobNavdown/MobNav";
 const Home = () => {
   const [popular, setPopular] = useState([]);
 
@@ -21,6 +22,10 @@ const Home = () => {
    { title: "upcoming" },
  ];
 
+ const [category, setcategory] = useState("movie")
+const changeGenre = (type="movies")=>{
+ setcategory(type)
+}
   useEffect(() => {
     fetch(
       "https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US"
@@ -31,6 +36,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+      {/* <MobNav /> */}
       {/* <div className="heropg"> */}
       {/* <div className="heading">
           <h1>
@@ -106,10 +112,10 @@ const Home = () => {
         {/* <img src={backGrounds} alt="" /> */}
       </div>
       {/* </div> */}
-      <NavDown />
+      <NavDown callbackFunction={changeGenre} />
       <Banner />
       {genres.map((x) => (
-        <MoviesSec title={x.title} />
+        <MoviesSec title={x.title} category={category} />
       ))}
       {/* <MoviesSec /> */}
       <Footer />

@@ -1,0 +1,30 @@
+@import "../../stylesVar.scss";
+
+.MobNav{
+    
+    display: flex;
+    position: fixed;
+    background-color: wheat;
+    height: 80px;
+    padding: 0 40px;
+    bottom: -10px;
+    width: 100%;
+    z-index: 100;
+    font-size: 20px;
+    justify-content: space-around;
+    align-items: center;
+    .navlinks{
+        svg{
+	fill: red;
+
+        }
+  	// text-transform: uppercase;
+    // background-clip:text;
+    // text-fill-color:transparent;
+	// -webkit-background-clip: text;
+	// -webkit-text-fill-color: transparent;
+    }
+   
+
+
+}

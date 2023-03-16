@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({movie}) => {
       const [isLoading, setIsLoading] = useState(true)
+
       const rating = movie ? movie.vote_average : "";
 
     useEffect(() => {
@@ -22,6 +23,9 @@ const Card = ({movie}) => {
       // onClick={() => window.location.reload()}
     >
       <div className="movieCards">
+        {/* <span>
+          `https://image.tmdb.org/t/p/original${movie ? movie.poster_path : ""}`
+        </span> */}
         <img
           className="movieCardsImg"
           src={`https://image.tmdb.org/t/p/original${

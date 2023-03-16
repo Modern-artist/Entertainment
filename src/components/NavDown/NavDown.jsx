@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import "./navDown.scss";
 
-const NavDown = () => {
+const NavDown = ({callbackFunction = () => {}}) => {
   return (
     <div className="NavDown">
       <Link className="navEle">
@@ -16,14 +16,14 @@ const NavDown = () => {
         </Link>
         <Link
           className="navLinks"
-          to="/underDevelopment"
           style={{ textDecoration: "none", color: "white" }}
+          onClick={() => callbackFunction("movie")}
         >
           Movies
         </Link>
         <Link
           className="navLinks"
-          to="/underDevelopment"
+          onClick={() => callbackFunction("tv")}
           style={{ textDecoration: "none", color: "white" }}
         >
           Web Series
@@ -42,6 +42,6 @@ const NavDown = () => {
       </Link>
     </div>
   );
-}
+};
 
 export default NavDown
